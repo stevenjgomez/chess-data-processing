@@ -17,7 +17,7 @@ from scipy import *
 import gc
 
 # Import code from anglerock.py
-from SGA_anglerock import anglerock
+from anglerock import anglerock
 
 
 #######################################################

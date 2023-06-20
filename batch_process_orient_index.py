@@ -40,10 +40,10 @@ print('\n\nSelected folders: ' + str(folders))
 
 val = input("Do you want to solve new orientation matrix using\n" + working_dir_orm + "? (y/n): ")
 if val=='y':
-   os.system("python SGA_auto_ormfinder.py "+working_dir_orm)
+   os.system("python auto_ormfinder.py "+working_dir_orm)
 
 if True:
   for folder in folders:
-    os.system("python SGA_Pil6M_HKLConv_3D_2022_selective.py "+ data_dir + folder + '/' + " " + working_dir_orm)
+    os.system("python Pil6M_HKLConv_3D.py "+ data_dir + folder + '/' + " " + working_dir_orm)
 else:
   pass
