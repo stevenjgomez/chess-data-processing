@@ -1,0 +1,66 @@
+# keep consistent with _meta/__init__.py
+
+[build-system]
+requires = ['setuptools>=61.2.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'chess-data-processing'
+version = '0.0.1'
+description = 'Stack, orient, and index data collected at CHESS ID4B.'
+readme = 'README.md'
+requires-python = '==3.6'
+license = { file = 'LICENSE' }
+authors = [{ name = 'Steven J. Gomez Alvarado', email = 'stevenjgomez@ucsb.edu' }]
+
+keywords = [
+    'diffraction',
+    'xrd',
+    'nexusformat',
+    'nexus',
+    'nxs',
+    'scattering',
+]
+classifiers = [
+    'Development Status :: 1 - Planning',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.6',
+    'Topic :: Scientific/Engineering :: Image Processing',
+    'Topic :: Scientific/Engineering',
+]
+dependencies = [
+    'h5py == 3.1.0',
+    'nexusformat == 0.7.4',
+    'numpy == 1.19.5',
+    'pandas == 1.1.5',
+    'psutil == 5.8.0',
+    'python == 3.6.13',
+    'scipy == 1.5.4',
+]
+
+[project.optional-dependencies]
+dev = [
+    'build >= 0.8.0',
+    'furo >= 2022.6.21',
+    'ipykernel >= 6.9.1',
+    'myst-nb >= 0.16.0',
+    'myst-parser >= 0.18.0',
+    'numpydoc >= 1.4.0',
+    'pandoc >= 2.2',
+    'pylint >= 2.12.2',
+    'pytest >= 7.1.2',
+    'sphinx >= 5.0.2',
+    'sphinx-autobuild >= 2021.3.14',
+    'sphinx-copybutton >= 0.5.0',
+    'sphinxext-opengraph >= 0.6.3',
+    'twine >= 4.0.1',
+]
+
+[project.urls]
+'Download' = 'https://pypi.org/project/chess-data-processing/'
+'Bug Tracker' = 'https://github.com/stevenjgomez/chess_data_processing/issues'
+'Documentation' = 'https://chess-data-processing.readthedocs.io/en/stable/'
+'Source Code' = 'https://github.com/stevenjgomez/chess_data_processing'
