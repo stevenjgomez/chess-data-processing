@@ -1,9 +1,9 @@
 import os
-from Pil6M_HKLConv_3D import Pil6M_HKLConv_3D
-from auto_ormfinder import auto_ormfinder
+from _Pil6M_HKLConv_3D import Pil6M_HKLConv_3D
+from _orienting import auto_ormfinder
 
 
-def orient_index(H, K, L, data_dir, orm_temp, index_temps=None, stacks_list=None):
+def orient_index_tempdep(H, K, L, data_dir, orm_temp, index_temps=None, stacks_list=None):
     if stacks_list is None:
         stacks_list = [1, 2, 3]
     if index_temps is None:

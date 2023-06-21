@@ -7,7 +7,9 @@ import sys, os
 import logging
 from os.path import exists
 import gc
+from _checkccode import checkccode
 
+checkccode()
 
 def get_peaklist(projectdir, valmin, valmax, lower_bound, upper_bound):
     projdir = projectdir
