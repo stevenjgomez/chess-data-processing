@@ -2,7 +2,7 @@ import pandas as pd
 from nexusformat.nexus import *
 from scipy.spatial.transform import Rotation as R
 from scipy.optimize import basinhopping
-import hkl
+import _hkl
 import sys, os
 import logging
 from os.path import exists

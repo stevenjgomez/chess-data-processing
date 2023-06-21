@@ -1,4 +1,4 @@
-import hkl
+import _hkl
 from pylab import *
 from _checkccode import checkccode
 
