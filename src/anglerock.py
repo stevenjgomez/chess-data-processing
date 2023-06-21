@@ -1,15 +1,5 @@
-from PIL import Image
-import numpy as np
-import ctypes as ct
-import os
-import sys
-import signal
-import time
-from nexusformat.nexus import *
 import hkl
 from pylab import *
-from scipy import *
-import gc
 
 
 def anglerock(H,K,L,stack,ormat,WL,U,data,norm,errors,workingdir,stacknum):
@@ -66,8 +56,8 @@ def anglerock(H,K,L,stack,ormat,WL,U,data,norm,errors,workingdir,stacknum):
     if (stack.norm.icnorm[i]>0.00):
       framenorm=1.0/(stack.norm.icnorm[i]*stack.norm.solidangle) #normalize solid angle and ionchamber
       count=count+1
-      IN=hkl.Calc_HKL(pol2,az2,eta,mu,chi,phi[i],WL,U)
-      hkl.HIST(IN,(Iall[:,:,i]*framenorm).ravel(),1.0,H,K,L,data,norm,errors)    
+      IN= hkl.Calc_HKL(pol2, az2, eta, mu, chi, phi[i], WL, U)
+      hkl.HIST(IN, (Iall[:, :, i] * framenorm).ravel(), 1.0, H, K, L, data, norm, errors)
 
   bp=time.time()
   n=len(n)

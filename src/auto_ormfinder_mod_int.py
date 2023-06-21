@@ -1,20 +1,10 @@
-import numpy as np
 from nexusformat.nexus import *
-import matplotlib.pyplot as plt
 from scipy.spatial.transform import Rotation as R
-from scipy.optimize import minimize
 from scipy.optimize import basinhopping
-from scipy.optimize import brute
-from scipy.optimize import fmin
 import hkl
-import time
 import sys,os
 import logging
 from os.path import exists
-import gc
-
-
-
 
 
 def get_peaklist(projectdir,val_max,val_min):
@@ -173,7 +163,7 @@ def find_euler(projectdir):
 		for i in range(0,peaknum):
 			pol,az=XYtoPOLAZ(peaklist[i][0],peaklist[i][1])
 			phi=philu[peaklist[i][2]]
-			IN=hkl.Calc_HKL(np.asarray([pol]),np.asarray([az]),eta,mu,chi,phi,wl,UBR)
+			IN= hkl.Calc_HKL(np.asarray([pol]), np.asarray([az]), eta, mu, chi, phi, wl, UBR)
 			dvec=IN-np.rint(IN)
 			chisq=chisq+np.linalg.norm(dvec)
 		return chisq/peaknum
@@ -309,7 +299,7 @@ def check_peaklist(projectdir,w,wl):
 			pol,az=XYtoPOLAZ(peaklist[i][0],peaklist[i][1])
 			#        phi=peaklist[i][2]
 			phi=philu[peaklist[i][2]]
-			IN=hkl.Calc_HKL(np.asarray([pol]),np.asarray([az]),eta,mu,chi,phi,wl,UBR)
+			IN= hkl.Calc_HKL(np.asarray([pol]), np.asarray([az]), eta, mu, chi, phi, wl, UBR)
 			print(IN)
 
 	printconvpeaks(peaklist,wl,UBRfinal.T,eta,mu,chi)
